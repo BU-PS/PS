@@ -1,5 +1,11 @@
 def solution(a, b):
-    answer=0
-    for i in range(len(a)):
-        answer+=a[i]*b[i]
-    return answer
+    #수정
+    answer=[a[i]*b[i] for i in range(len(a))]
+    return sum(answer)
+
+#def solution(a,b):
+ #   answer=[]
+  #  for i in range(len(a)):
+   #     answer.append(a[i]*b[i])
+    #return sum(answer)
+
