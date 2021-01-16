@@ -6,8 +6,10 @@ def solution(n, arr1, arr2):
     for i in range(n):
         arr=bin(arr1[i] | arr2[i]) # arr1과 arr2를 2진수로 만들어서 합쳐주기(비트연산자)
         arr=arr[2:] 
+
         if len(arr)<n:
             arr='0'*(n-len(arr))+arr #잊어버리지말기..
         arr=arr.replace('0',' ').replace('1','#')
         answer.append(arr)
+        
     return answer
