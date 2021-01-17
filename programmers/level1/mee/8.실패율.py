@@ -5,9 +5,12 @@ def solution(N, stages):
     for i in range(N):
         if person==0:  #분모가 0이라면, [i,0]을 담아줌
             fail_p[i]=[i,0]
+            #fail_p[i]=[i+1,0]
             continue
         fail_p[i]=[i,(answer[i]/person)] #분모가 0이 아니라면, [i,몫을 담아줌]
+        # fail_p[i]=[i+1,(answer[i]/person)]
         person=person-answer[i] # 인원을 빼줌
     
     fail_p.sort(key=lambda x:x[1], reverse=True) # 몫을 기준으로 정렬
     return [fail_p[j][0]+1 for j in range(len(fail_p))]
+    # return [fail_p[j][0] for j in range(len(fail_p))]
