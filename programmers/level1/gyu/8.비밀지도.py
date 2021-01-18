@@ -29,3 +29,12 @@ def solution(n, arr1, arr2):
         answer.append(temp)
 
     return answer
+
+''' 참고하기
+def solution(n, arr1, arr2):
+    answer = []
+    for index in range(0,n):
+        answer.append(str(bin(arr1[index] | arr2[index] | pow(2,n))).replace("0b1","").replace("1","#").replace("0"," "))
+
+    return answer
+'''
